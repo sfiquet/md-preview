@@ -10,11 +10,11 @@ class App extends Component {
         </header>
         <main>
           <div>
-            <label for="editor">Enter markdown code:</label>
+            <label htmlFor="editor">Enter markdown code:</label>
             <textarea id="editor" name="editor" />
           </div>
           <div>
-            <label for="preview">Preview:</label>
+            <label htmlFor="preview">Preview:</label>
             <div id="preview"></div>
           </div>
         </main>
