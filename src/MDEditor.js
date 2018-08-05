@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import marked from 'marked';
 import './MDEditor.css';
 
 class MDEditor extends Component {
@@ -13,6 +14,12 @@ class MDEditor extends Component {
     this.setState({markdown: event.target.value});
   }
 
+  getMarkdownHTML(mdCode){
+    return {
+      __html: marked(mdCode, {sanitize: true})
+    };
+  }
+
   render() {
     return (
       <div className="MDEditor">
@@ -24,7 +31,9 @@ class MDEditor extends Component {
           </div>
         <div className="form-group col-12 col-lg-6 bg-white d-flex flex-column">
           <label className="d-block" htmlFor="preview">Preview</label>
-          <div className="MDEditor-preview text-left p-2 w-100 bg-light" id="preview">{this.state.markdown}</div>
+          <div className="MDEditor-preview text-left p-2 w-100 bg-light" 
+            id="preview" dangerouslySetInnerHTML={this.getMarkdownHTML(this.state.markdown)}>
+          </div>
         </div>
         </div>
       </div>
