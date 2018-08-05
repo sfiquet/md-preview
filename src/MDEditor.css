@@ -1,0 +1,9 @@
+.MDEditor-textarea {
+  height: 20em;
+  min-height: 10em;
+}
+
+.MDEditor-preview {
+  min-height: 10em;
+  flex-grow: 1;
+}

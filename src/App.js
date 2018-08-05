@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MDEditor from './MDEditor';
 import './App.css';
 
 class App extends Component {
@@ -8,15 +9,8 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Markdown Previewer</h1>
         </header>
-        <main>
-          <div>
-            <label htmlFor="editor">Enter markdown code:</label>
-            <textarea id="editor" name="editor" />
-          </div>
-          <div>
-            <label htmlFor="preview">Preview:</label>
-            <div id="preview"></div>
-          </div>
+        <main className="container pt-2">
+          <MDEditor></MDEditor>
         </main>
       </div>
     );
