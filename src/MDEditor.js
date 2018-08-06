@@ -53,7 +53,7 @@ class MDEditor extends Component {
 
   getMarkdownHTML(mdCode){
     return {
-      __html: marked(mdCode, { renderer })
+      __html: marked(mdCode, { renderer, breaks: true })
     };
   }
 
