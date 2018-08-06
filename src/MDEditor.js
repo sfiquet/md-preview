@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import marked from 'marked';
 import './MDEditor.css';
 
+// modify markedjs's default behaviour
+const renderer = new marked.Renderer();
+const linkRenderer = renderer.link;
+renderer.link = (href, title, text) => {
+    const html = linkRenderer.call(renderer, href, title, text);
+    return html.replace(/^<a /, '<a target="_blank" rel="nofollow noopener noreferrer" ');
+};
+
 const defaultText = 
 `# Header
 ## Subheader
@@ -45,7 +53,7 @@ class MDEditor extends Component {
 
   getMarkdownHTML(mdCode){
     return {
-      __html: marked(mdCode)
+      __html: marked(mdCode, { renderer })
     };
   }
 
