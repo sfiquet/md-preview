@@ -2,10 +2,39 @@ import React, { Component } from 'react';
 import marked from 'marked';
 import './MDEditor.css';
 
+const defaultText = 
+`# Header
+## Subheader
+Link example: [FreeCodeCamp](https://freecodecamp.org)
+
+Here's some inline code: \`const myNumber = 42;\` and here's a code block:
+\`\`\`
+let i = 0;
+while (i < 10){
+  console.log(i);
+  i++;
+}
+\`\`\`
+
+Here's a list:
+- egg
+- flours
+- tomatoes
+
+quote:
+> Here's a quote
+
+An image:
+
+![React Logo w/ Text](https://goo.gl/Umyytc)
+
+Text can be in *italics* or **bold** or ***both***
+`;
+
 class MDEditor extends Component {
   constructor(props) {
     super(props);
-    this.state = { markdown: '' };
+    this.state = { markdown: defaultText };
 
     this.handleChange = this.handleChange.bind(this);
   }
@@ -16,7 +45,7 @@ class MDEditor extends Component {
 
   getMarkdownHTML(mdCode){
     return {
-      __html: marked(mdCode, {sanitize: true})
+      __html: marked(mdCode)
     };
   }
 
