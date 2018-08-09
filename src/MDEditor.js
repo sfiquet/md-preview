@@ -61,17 +61,23 @@ class MDEditor extends Component {
     return (
       <div className="MDEditor">
         <div className="row">
-          <div className="form-group col-12 col-lg-6 bg-white d-flex flex-column">
-            <label className="d-block" htmlFor="editor">Edit</label>
+          <div className="form-group col-12 col-lg-6 bg-white d-flex flex-column" id="edit-block">
+            <div className="d-flex justify-content-between align-items-center pb-2">
+              <label className="d-block mb-0" htmlFor="editor">Edit</label>
+              <a className="btn btn-primary d-md-none" href="#preview-block">Preview</a>
+            </div>
             <textarea className="MDEditor-textarea form-control w-100" 
               id="editor" name="editor" value={this.state.markdown} onChange={this.handleChange} />
           </div>
-        <div className="form-group col-12 col-lg-6 bg-white d-flex flex-column">
-          <label className="d-block" htmlFor="preview">Preview</label>
-          <div className="MDEditor-preview text-left p-2 w-100 bg-light" 
-            id="preview" dangerouslySetInnerHTML={this.getMarkdownHTML(this.state.markdown)}>
+          <div className="form-group col-12 col-lg-6 bg-white d-flex flex-column" id="preview-block">
+            <div className="d-flex justify-content-between align-items-center pb-2">
+              <label className="d-block mb-0" htmlFor="preview">Preview</label>
+              <a className="btn btn-primary d-md-none" href="#edit-block">Edit</a>
+            </div>
+            <div className="MDEditor-preview text-left p-2 w-100 bg-light" 
+              id="preview" dangerouslySetInnerHTML={this.getMarkdownHTML(this.state.markdown)}>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     );
