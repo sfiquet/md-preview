@@ -11,3 +11,7 @@
 .MDEditor-preview blockquote {
   margin-left: 2.5rem;
 }
+
+.MDEditor-preview img {
+  max-width: 100%;
+}
