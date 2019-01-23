@@ -12,7 +12,7 @@ class App extends Component {
             <span className="App-title-previewer d-inline-block align-bottom">Previewer</span>
           </div>
         </header>
-        <main className="container pt-2 pb-4">
+        <main className="container pb-4">
           <MDEditor></MDEditor>
         </main>
       </div>
