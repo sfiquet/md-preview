@@ -6,7 +6,6 @@
 
 .App-header {
   background-color: hsl(194, 15%, 38%);
-  padding: 20px;
   color: white;
 }
 
@@ -14,8 +13,15 @@
   font-size: 1.5em;
 }
 
+@media screen and (min-width: 768px) {
+  .App-title {
+    font-size: 2.5em;
+  }
+}
+
 .App-title-markdown {
   font-family: 'Inconsolata', monospace;
+  margin-bottom: .4em; /* must be in em not rem to maintain proportions when changing font size */
 }
 
 .App-title-previewer {
