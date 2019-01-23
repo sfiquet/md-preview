@@ -13,3 +13,11 @@
 .App-title {
   font-size: 1.5em;
 }
+
+.App-title-markdown {
+  font-family: 'Inconsolata', monospace;
+}
+
+.App-title-previewer {
+  font-family: 'Courgette', cursive;
+}
