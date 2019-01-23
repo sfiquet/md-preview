@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Markdown Previewer</h1>
         </header>
-        <main className="container pt-2">
+        <main className="container pt-2 pb-4">
           <MDEditor></MDEditor>
         </main>
       </div>
