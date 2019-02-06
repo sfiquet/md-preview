@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background: linear-gradient(hsla(203, 63%, 10%, 50%), hsl(187, 100%, 61%, 50%));
+  background: linear-gradient(hsla(203, 63%, 10%, .5), hsla(187, 100%, 61%, .5));
   background-attachment: fixed;
 }
 
