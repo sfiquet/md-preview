@@ -15,3 +15,9 @@
 .MDEditor-preview img {
   max-width: 100%;
 }
+
+.MDEditor-btn {
+  color: #fff;
+  background-color: hsl(200, 100%, 42%);
+  border-color: hsl(200, 100%, 42%);
+}
