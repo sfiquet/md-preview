@@ -27,3 +27,12 @@
 .App-title-previewer {
   font-family: 'Courgette', cursive;
 }
+
+.App-footer {
+  background-color: hsl(187, 51%, 42%);
+  color: hsl(210, 100%, 18%);
+}
+
+.App-footer a {
+  color: white;
+}
